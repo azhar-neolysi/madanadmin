@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Madan Admin</string>
+    <string name="title_activity_main">Madan Admin</string>
+    <string name="package_name">com.madan.admin</string>
+    <string name="custom_url_scheme">com.madan.admin</string>
+</resources>

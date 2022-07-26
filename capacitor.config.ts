@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'madanadmin',
+  appId: 'com.madan.admin',
+  appName: 'Madan Admin',
   webDir: 'www',
   bundledWebRuntime: false
 };

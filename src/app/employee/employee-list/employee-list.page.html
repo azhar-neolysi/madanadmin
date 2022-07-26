@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+      <ion-title>
+          Employees
+      </ion-title>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+          <ion-icon name="add-outline" (click)="newEmployee()" class="addicon"></ion-icon>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let item of employeeList">
+      <ion-card-content>
+          <div>
+              <ion-note class="highlight">
+                  <ion-icon name="person-outline"></ion-icon> Name: {{item.firstName}} {{item.lastName}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note>
+                  <ion-icon name="man-outline"></ion-icon> Gender: {{item.gender}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note class="highlight">
+                  <ion-icon name="call-outline"></ion-icon> Phone NO: {{item.mobileNo}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note>
+                  <ion-icon name="today-outline"></ion-icon> DateOfBirth: {{item.dob | date:'MMM dd, y'}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-fab vertical="top" horizontal="end">
+                  <ion-fab-button class="accpt" size="small" (click)="editEmployee(item.employeeId)">
+                      <ion-icon class="highlight" name="pencil-outline"></ion-icon>
+                  </ion-fab-button>
+
+              </ion-fab>
+              <ion-fab vertical="bottom" horizontal="end">
+                  <ion-fab-button class="cancel" size="small" (click)="deleteEmployee(item.employeeId)">
+                      <ion-icon name="trash-outline"></ion-icon>
+                  </ion-fab-button>
+              </ion-fab>
+          </div>
+
+      </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

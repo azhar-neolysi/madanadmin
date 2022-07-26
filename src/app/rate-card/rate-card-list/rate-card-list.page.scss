@@ -1,0 +1,54 @@
+@import './../../../global.scss';
+.item-label {
+    font-size: 13px;
+    color: grey;
+    padding: 4px 0px;
+}
+
+.item {
+    --border-color: transparent;
+}
+
+ion-card-content {
+    div {
+        margin-top: 10px;
+        .route {
+            font-size: 16px;
+        }
+    }
+}
+
+.addicon {
+    font-size: 32px;
+}
+
+.nobackground {
+    --background: transparent;
+    position: sticky;
+    --padding: 0px !important;
+}
+
+ion-toggle {
+    --background: white;
+    --background-checked: var(--primary-color);
+    --handle-background: white;
+    --handle-background-checked: var(--primary-color);
+}
+
+ion-list {
+    background: var(--bg-color);
+}
+
+ion-item-option {
+    margin: 0 0% 2% 1%;
+}
+
+.slideicon {
+    font-size: 23px;
+}
+
+@media only screen and (min-width:450px) {
+    .accpt {
+        margin-top: 45px;
+    }
+}

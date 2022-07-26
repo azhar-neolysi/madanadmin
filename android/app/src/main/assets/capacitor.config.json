@@ -1,0 +1,6 @@
+{
+	"appId": "com.madan.admin",
+	"appName": "Madan Admin",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

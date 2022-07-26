@@ -6,7 +6,19 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+  },
+  {
+    path: 'truck-detail',
+    loadChildren: () => import('./truck-detail/truck-detail.module').then( m => m.TruckDetailPageModule)
+  },
+  {
+    path: ':latlong/:polId/truck-detail',
+    loadChildren: () => import('./truck-detail/truck-detail.module').then( m => m.TruckDetailPageModule)
+  },
+  // {
+  //   path: ':latlong/:polId/truck-detail',
+  //   component: TruckDetailPage
+  // }
 ];
 
 @NgModule({

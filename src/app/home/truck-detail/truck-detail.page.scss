@@ -1,0 +1,61 @@
+@import './../../../global.scss';
+.item-label {
+    font-size: 14px;
+    color: grey;
+    padding: 4px 0px;
+}
+
+.highlight-label {
+    color: #e8a700;
+    font-size: 16px !important;
+}
+
+// ion-content {
+//     --background: var(--primary-color) !important;
+// }
+ion-card-content {
+    div {
+        margin-top: 10px;
+        ion-icon {
+            margin-right: 5px;
+        }
+    }
+}
+
+.send-alert-btn {
+    position: absolute;
+    right: 15px;
+    margin-top: -35px;
+    --background: transparent;
+    --color: var(--primary-color);
+}
+
+.trucks-list {
+    height: 40vh;
+    width: 100vw;
+    overflow-y: auto;
+    // position: sticky;
+}
+
+.map-div {
+    margin-top: 3%;
+    height: 50vh;
+    width: 100vw;
+}
+
+.no_vehicle {
+    color: black;
+    width: 100vw;
+}
+
+// .card {
+//     height: 40vh;
+// }
+.noVehiCont {
+    color: black;
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+    height: 40vh;
+    align-items: center;
+}

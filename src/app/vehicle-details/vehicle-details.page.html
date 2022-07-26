@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+      <ion-title>
+          Enquiry Responses
+      </ion-title>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let item of vehiclesList">
+      <ion-card-content>
+          <div>
+              <ion-note>
+                  <ion-icon name="pin"></ion-icon> Booking Id: {{item.bookingId}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note>
+                  <ion-icon name="person"></ion-icon> Customer Name: {{item.customerName}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note>
+                  <ion-icon name="trail-sign"></ion-icon> Transporter Name: {{item.vehicleOwnerName}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note>
+                  <ion-icon name="bus"></ion-icon> Truck Type: {{item.truckType}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note>
+                  <ion-icon name="reader"></ion-icon> Vehicle No: {{item.vehicleNo}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note>
+                  <ion-icon name="location"></ion-icon> Current Location: {{item.location}}
+              </ion-note>
+          </div>
+          <div>
+              <ion-note>
+                  <ion-icon name="call"></ion-icon> Mobile No: {{item.mobile}}
+              </ion-note>
+          </div>
+
+          <span>
+              <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                  <ion-fab-button style="--background: var(--primary-color) !important; "(click)="confirm(item.polBookingMappingId,item.refVehicleId,item.vehicleBookingEnqResponseId)">
+                      <ion-icon class="send-confirmation-btn" name="checkmark-done-circle-sharp"></ion-icon>
+                  </ion-fab-button>
+              </ion-fab>
+          </span>
+      </ion-card-content>
+  </ion-card>
+</ion-content>
