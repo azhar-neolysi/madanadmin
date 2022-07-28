@@ -89,6 +89,7 @@ export class RateCardFormPage implements OnInit {
       console.log('Rateform->', this.newRateForm.value);
       if (this.newRateForm.value.refSourceReferenceList === this.newRateForm.value.refDestinationReferenceList) {
         this.toaster.danger('Source and Destination cannot be same');
+        this.router.navigate(['rate-card-list']);
         return;
       }
       if (this.editRateId > -1) {

@@ -1,70 +1,101 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="toolbar">
-      <ion-title>
-          Reference
-      </ion-title>
-      <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-      </ion-buttons>
+    <ion-title> Reference </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
-      <ion-card-header>
-          <ion-card-title style="--color: var(--primary-color) !important; ">Reference</ion-card-title>
-      </ion-card-header>
-      <ion-card-content class="reference-card-content">
-          <form [formGroup]="referenceForm">
-              <ion-item>
-                  <ion-label>Name</ion-label>
-                  <ion-input style="text-align: right;" formControlName="name" type="text" placeholder="Reference Name"></ion-input>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Description</ion-label>
-                  <ion-textarea style="text-align: right;" formControlName="description"></ion-textarea>
-              </ion-item>
-          </form>
-          <br>
-          <br>
-          <br>
-          <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-              <ion-fab-button style="--background: var(--primary-color) !important; " (click)="onReferenceCreation()">
-                  <ion-icon name="add-outline"></ion-icon>
-              </ion-fab-button>
-          </ion-fab>
-
-      </ion-card-content>
+    <ion-card-header>
+      <ion-card-title style="--color: var(--primary-color) !important"
+        >Reference</ion-card-title
+      >
+    </ion-card-header>
+    <ion-card-content class="reference-card-content">
+      <form [formGroup]="referenceForm">
+        <ion-item>
+          <ion-label>Name</ion-label>
+          <ion-input
+            style="text-align: right"
+            formControlName="name"
+            type="text"
+            placeholder="Reference Name"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Description</ion-label>
+          <ion-textarea
+            style="text-align: right"
+            formControlName="description"
+          ></ion-textarea>
+        </ion-item>
+      </form>
+      <br />
+      <br />
+      <br />
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button
+          style="--background: var(--primary-color) !important"
+          (click)="onReferenceCreation()"
+        >
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-card-content>
   </ion-card>
   <ion-card>
-      <ion-card-header>
-          <ion-card-title style="--color: var(--primary-color) !important; ">Reference List</ion-card-title>
-      </ion-card-header>
-      <ion-card-content class="reference-card-content">
-          <form [formGroup]="referenceListForm">
-              <ion-item>
-                  <ion-label>Reference Id</ion-label>
-                  <ion-select formControlName="refReferenceId" interface="popover" mode="ios" placeholder="Select Id">
-                      <ion-select-option *ngFor="let id of referenceIds" [value]="id.referenceId">{{id.name}}</ion-select-option>
-                  </ion-select>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Name</ion-label>
-                  <ion-input style="text-align: right;" formControlName="name" type="text" placeholder="Reference Name"></ion-input>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Description</ion-label>
-                  <ion-textarea style="text-align: right;" formControlName="description"></ion-textarea>
-              </ion-item>
-          </form>
-          <br>
-          <br>
-          <br>
-          <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-              <ion-fab-button style="--background: var(--primary-color) !important; " (click)="onReferenceListCreation()">
-                  <ion-icon name="add-outline"></ion-icon>
-              </ion-fab-button>
-          </ion-fab>
-      </ion-card-content>
+    <ion-card-header>
+      <ion-card-title style="--color: var(--primary-color) !important"
+        >Reference List</ion-card-title
+      >
+    </ion-card-header>
+    <ion-card-content class="reference-card-content">
+      <form [formGroup]="referenceListForm">
+        <ion-item>
+          <ion-label>Reference Id</ion-label>
+          <ion-select
+            formControlName="refReferenceId"
+            interface="action-sheet"
+            placeholder="Select Id"
+          >
+            <ion-select-option
+              *ngFor="let id of referenceIds"
+              [value]="id.referenceId"
+              >{{id.name}}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>Name</ion-label>
+          <ion-input
+            style="text-align: right"
+            formControlName="name"
+            type="text"
+            placeholder="Reference Name"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Description</ion-label>
+          <ion-textarea
+            style="text-align: right"
+            formControlName="description"
+          ></ion-textarea>
+        </ion-item>
+      </form>
+      <br />
+      <br />
+      <br />
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button
+          style="--background: var(--primary-color) !important"
+          (click)="onReferenceListCreation()"
+        >
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-card-content>
   </ion-card>
 </ion-content>

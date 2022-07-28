@@ -24,9 +24,9 @@ export class RateCardListPage implements OnInit {
 
   ngOnInit() { }
   ionViewWillEnter() {
-    this.viewChanger='CustomerRate';
+    this.viewChanger=false;
     this.getRateList('CustomerRate');
-    console.log('==>', this.viewChanger);
+    console.log('CustomerRate');
   }
 
   newRate() {
@@ -36,11 +36,11 @@ export class RateCardListPage implements OnInit {
   changeView() {
 
     if (this.viewChanger) {
-      if(this.viewChanger==='CustomerRate'){
+      if(!this.viewChanger){
 
-        this.viewChanger='TransporterRate';
+        this.viewChanger=true;
       }
-      console.log('==>', this.viewChanger);
+      console.log('TransporterRate');
       this.getRateList('TransporterRate');
     }
     else
