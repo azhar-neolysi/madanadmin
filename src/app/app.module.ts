@@ -30,7 +30,15 @@ import { ReferenceApiService } from './services/reference/reference-api.service'
 import { EmployeeApiService } from './services/employee/employee-api.service';
 import { MyProfileApiService } from './services/my-profile/my-profile.service';
 import { LoginApiService } from './services/login/login-api.service';
-
+import {
+  NativeGeocoder,
+  NativeGeocoderResult,
+  NativeGeocoderOptions,
+} from '@awesome-cordova-plugins/native-geocoder/ngx';
+import {
+  Geolocation,
+  Geoposition,
+} from '@awesome-cordova-plugins/geolocation/ngx';
 
 
 @NgModule({
@@ -51,11 +59,13 @@ import { LoginApiService } from './services/login/login-api.service';
     StatusBar,
     ToastService,
     FormBuilder,
+    NativeGeocoder,
     Validators,
     RateApiService,
     LoaderService,
     ReciptsApiService,
     AlertService,
+    Geolocation,
     ApiService,
     HomeApiService,
     LocalStorageService,

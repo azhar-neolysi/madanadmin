@@ -45,13 +45,15 @@
             placeholder="Select Gender"
             formControlName="gender"
             interface="action-sheet"
+            mode="ios"
           >
             <ion-select-option value="M">Male</ion-select-option>
             <ion-select-option value="F">Female</ion-select-option>
           </ion-select>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label postion="fixed">DOB:</ion-label>
+          <ion-label postion="fixed">DOB:</ion-label></ion-item>
+          <ion-item>
           <ion-datetime
             placeholder="select date of birth"
             formControlName="dob"
@@ -59,7 +61,8 @@
           ></ion-datetime>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label postion="fixed">DOJ:</ion-label>
+          <ion-label postion="fixed">DOJ:</ion-label></ion-item>
+          <ion-item>
           <ion-datetime
             placeholder="select date of join"
             formControlName="doj"
@@ -111,8 +114,9 @@
           <ion-select
             mode="ios"
             formControlName="refReferenceListCityId"
-            placeholder="Select State"
+            placeholder="Select City"
             interface="action-sheet"
+            mode="ios"
           >
             <ion-select-option
               *ngFor="let item of intialLists?.cityList"
@@ -128,6 +132,7 @@
             formControlName="refReferenceListStateId"
             placeholder="Select State"
             interface="action-sheet"
+            mode="ios"
           >
             <ion-select-option
               *ngFor="let item of intialLists?.stateList"
@@ -140,8 +145,9 @@
           <ion-label>Country:</ion-label>
           <ion-select
              formControlName="refReferenceListCountryId"
-            placeholder="Select State"
+            placeholder="Select Country"
             interface="action-sheet"
+            mode="ios"
           >
             <ion-select-option
               *ngFor="let item of intialLists?.countryList"

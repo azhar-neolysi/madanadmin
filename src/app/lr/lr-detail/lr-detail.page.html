@@ -14,7 +14,7 @@
   <form class="form" [formGroup]="lrForm">
     <ion-item class="form-item">
       <ion-label postion="fixed">Booking Id</ion-label>
-      <ion-select formControlName="bookingId" interface="action-sheet">
+      <ion-select formControlName="bookingId" interface="action-sheet" mode="ios">
         <ion-select-option *ngFor="let booking of bookingIds" [value]="booking"
           >{{booking}}</ion-select-option
         >

@@ -9,13 +9,47 @@
 
 <ion-content>
   <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-radio-group value="reference" (ionChange)="ref($event)">
+          <ion-list-header>
+            <ion-label>Reference or Reference List </ion-label>
+          </ion-list-header>
+
+          <ion-item>
+
+            <ion-radio slot="start" value="reference"></ion-radio>
+            <ion-label>Reference</ion-label>
+            <ion-radio slot="end" value="list"></ion-radio>
+            <ion-label>Reference List</ion-label>
+          </ion-item>
+
+          <!-- <ion-item>
+
+          </ion-item> -->
+
+
+        </ion-radio-group>
+        <br />
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="reference  && !rList" >
     <ion-card-header>
       <ion-card-title style="--color: var(--primary-color) !important"
         >Reference</ion-card-title
       >
     </ion-card-header>
+
     <ion-card-content class="reference-card-content">
+      <!-- <ion-item>
+        <ion-radio>
+
+        </ion-radio>
+      </ion-item> -->
       <form [formGroup]="referenceForm">
+
+
         <ion-item>
           <ion-label>Name</ion-label>
           <ion-input
@@ -46,7 +80,7 @@
       </ion-fab>
     </ion-card-content>
   </ion-card>
-  <ion-card>
+  <ion-card *ngIf="rList">
     <ion-card-header>
       <ion-card-title style="--color: var(--primary-color) !important"
         >Reference List</ion-card-title
@@ -60,6 +94,7 @@
             formControlName="refReferenceId"
             interface="action-sheet"
             placeholder="Select Id"
+            mode="ios"
           >
             <ion-select-option
               *ngFor="let id of referenceIds"

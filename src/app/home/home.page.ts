@@ -17,12 +17,12 @@ export class HomePage implements OnInit {
     private homeService: HomeApiService,
     private loader: LoaderService,
     private platform: Platform) {
-    this.backButtonSubscription = this.platform.backButton.subscribeWithPriority(10, () => {
-      // if (this.constructor.name == 'HomePage')
-      if (window.confirm('Do you want to exit ?')) {
-        (navigator as any).app.exitApp();
-      }
-    });
+    // this.backButtonSubscription = this.platform.backButton.subscribeWithPriority(10, () => {
+    //   // if (this.constructor.name == 'HomePage')
+    //   if (window.confirm('Do you want to exit ?')) {
+    //     (navigator as any).app.exitApp();
+    //   }
+    // });
   }
 
   ngOnInit() { }

@@ -7,6 +7,11 @@ import { IonicModule } from '@ionic/angular';
 import { TruckDetailPageRoutingModule } from './truck-detail-routing.module';
 
 import { TruckDetailPage } from './truck-detail.page';
+import {
+  NativeGeocoder,
+  NativeGeocoderResult,
+  NativeGeocoderOptions,
+} from '@awesome-cordova-plugins/native-geocoder/ngx';
 
 @NgModule({
   imports: [
@@ -15,6 +20,7 @@ import { TruckDetailPage } from './truck-detail.page';
     IonicModule,
     TruckDetailPageRoutingModule
   ],
+  providers:[NativeGeocoder],
   declarations: [TruckDetailPage]
 })
 export class TruckDetailPageModule {}

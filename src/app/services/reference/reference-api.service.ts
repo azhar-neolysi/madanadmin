@@ -42,4 +42,7 @@ export class ReferenceApiService {
   deleteReference(referenceId, req) {
     return this.api.delete(this.api.formUrl('Reference', referenceId), req);
   }
+  getReferceListDatas(name) {
+    return this.api.get('ReferenceList/GetRLByRName/?name=' + name);
+  }
 }

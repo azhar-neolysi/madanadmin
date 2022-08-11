@@ -36,10 +36,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {}
   ionViewWillEnter() {
-    this.backButtonSubscription =
-      this.platform.backButton.subscribeWithPriority(666666, () => {
-        (navigator as any).app.exitApp();
-      });
+    // this.backButtonSubscription =
+    //   this.platform.backButton.subscribeWithPriority(666666, () => {
+    //     (navigator as any).app.exitApp();
+    //   });
   }
   login() {
     if (this.loginForm.valid) {
